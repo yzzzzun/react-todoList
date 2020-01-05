@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
+import TodoTemplate from './components/TodoTemplate';
 
 const App = () => {
-  return <div>todo-list작업 시작</div>;
+  return <TodoTemplate>todo-List-components</TodoTemplate>;
 };
 
 export default App;
