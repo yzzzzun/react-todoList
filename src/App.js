@@ -4,12 +4,20 @@ import TodoTemplate from './components/TodoTemplate';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
+function createBulkTodos() {
+  const array = [];
+  for (let i = 1; i <= 2500; i++) {
+    array.push({
+      id: i,
+      text: `할일 ${i}`,
+      checked: false,
+    });
+  }
+  return array;
+}
+
 const App = () => {
-  const [todos, setTodos] = useState([
-    { id: 1, text: 'react.js 학습', checked: true },
-    { id: 2, text: 'node.js 학습', checked: true },
-    { id: 3, text: 'mongoDB 학습', checked: false },
-  ]);
+  const [todos, setTodos] = useState(createBulkTodos);
 
   const nextId = useRef(4);
 
